@@ -18,6 +18,8 @@
 (require 'init-theme)
 (require 'init-markdown)
 
+(require 'init-dev-env-c)
+
 
 
 ;;-------------------------------------------------- 
@@ -26,5 +28,3 @@
 (when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
   (error "Please move init-local.el to ~/.emacs.d/lisp"))
 (require 'init-local nil t)
-
-

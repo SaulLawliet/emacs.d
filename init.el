@@ -12,15 +12,17 @@
 (require 'init-utils)
 (require 'init-elpa)
 
-(require 'init-company)
-(require 'init-evil)
-(require 'init-smex)
-(require 'init-theme)
-(require 'init-markdown)
+(require 'init-company) ;; 代码自动补全
+(require 'init-evil) ;; 将快捷键改成vim
+(require 'init-smex) ;; 方便M-x后输入命令
+(require 'init-markdown) ;; 支持md语法
 
-(require 'init-dev-env-c)
+(require 'init-dev-env-c) ;; C开发环境
 
 
+;; 终端下不加载主题
+(when (not (eq window-system 'nil))
+  (require 'init-theme))
 
 ;;-------------------------------------------------- 
 ;; 最后加载用户自定义配置

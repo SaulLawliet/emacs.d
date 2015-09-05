@@ -18,4 +18,4 @@ Create a file `~/.emacs.d/lisp/init-local.el` which looks like this:
 
 (provide 'init-local)
 ```
-You should use keywords of `init-local.el` to search this repository. Then you'll find something needs you config, if you want it worked good.
+You should use keywords of `init-local` to search this repository. Then you'll find something needs you config, if you want it worked good.

@@ -17,7 +17,7 @@
 (require 'init-smex) ;; 方便 M-x 后输入命令
 (require 'init-markdown)
 
-(require 'init-dev-env) ;; 代码补全&代码检查
+(require 'init-dev-env) ;; 代码通用部分 
 (require 'init-dev-env-c)
 (require 'init-dev-env-go)
 

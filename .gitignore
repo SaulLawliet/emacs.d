@@ -3,3 +3,4 @@ elpa
 smex-items
 bookmarks
 lisp/init-local.el
+ac-comphist.dat

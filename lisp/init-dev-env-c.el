@@ -1,13 +1,18 @@
 ;; 首先, 需要在系统里安装 clang, 才能触发 c-mode 的 company 补全.
 
 ;; include 补全
-(require-package 'company-c-headers)
-(after-load 'company
-  (add-to-list 'company-backends 'company-c-headers))
+(require-package 'auto-complete-c-headers)
+
+(defun my:ac-c-headers-init ()
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers))
+
+(add-hook 'c-mode-hook 'my:ac-c-headers-init)
+
 ;; 下面这一句需要写到 init-local.el 文件中
 ;; 其中路径查询使用: gcc -xc -E -v -
-;;(after-load 'company-c-headers
-;;  (add-to-list 'company-c-headers-path-system '"your include path"))
+;;(after-load 'auto-complete-c-headers
+;;  (add-to-list 'achead:include-directories '"your include path"))
 
 ;; iedit, 批量修改变量名, 貌似是按照字符匹配
 (require-package 'iedit)

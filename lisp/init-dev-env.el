@@ -11,7 +11,7 @@
 ;;(yas-global-mode 1)
 
 ;; 符号对 
-(require-package 'smartparens)
-(smartparens-global-strict-mode 1)
+;;(require-package 'smartparens)
+;;(smartparens-global-strict-mode 1)
 
 (provide 'init-dev-env)

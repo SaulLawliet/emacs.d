@@ -3,7 +3,6 @@
 ;;-------------------------------------------------- 
 (setq make-backup-files nil) ;; 关闭备份文件功能
 (setq inhibit-startup-screen t) ;; 关闭欢迎页面
-(setq speedbar-show-unknown-files t) ;; 让 speedbar 显示所有文件
 
 ;;-------------------------------------------------- 
 ;; 插件配置脚本
@@ -16,6 +15,7 @@
 (require 'init-evil) ;; 将快捷键改成 vim
 (require 'init-smex) ;; 方便 M-x 后输入命令
 (require 'init-markdown)
+(require 'init-sr-speedbar)
 
 (require 'init-dev-env) ;; 代码通用部分 
 (require 'init-dev-env-c)

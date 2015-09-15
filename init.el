@@ -20,6 +20,10 @@
 (require 'init-dev-env) ;; 代码通用部分 
 (require 'init-dev-env-c)
 (require 'init-dev-env-go)
+(require 'init-dev-env-ruby)
+
+(require-package 'ido)
+(ido-mode t)
 
 
 ;; 终端下不加载主题

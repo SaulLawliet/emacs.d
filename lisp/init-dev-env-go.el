@@ -6,7 +6,7 @@
 
 (add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'go-mode-hook (lambda ()
-			  (setq tab-width 2)
+			  (setq tab-width 4)
 			  (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
 			  (local-set-key (kbd "C-c i") 'go-goto-imports)))
 

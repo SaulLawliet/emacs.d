@@ -12,18 +12,14 @@
 (require 'init-elpa)
 (require 'init-exec-path)
 
+(require 'init-function) ;; 一些功能
 (require 'init-evil) ;; 将快捷键改成 vim
-(require 'init-smex) ;; 方便 M-x 后输入命令
 (require 'init-markdown)
-(require 'init-sr-speedbar)
 
 (require 'init-dev-env) ;; 代码通用部分 
 (require 'init-dev-env-c)
 (require 'init-dev-env-go)
 (require 'init-dev-env-ruby)
-
-(require-package 'ido)
-(ido-mode t)
 
 
 ;; 终端下不加载主题

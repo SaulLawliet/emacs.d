@@ -5,3 +5,4 @@ bookmarks
 lisp/init-local.el
 ac-comphist.dat
 eshell
+ido.last

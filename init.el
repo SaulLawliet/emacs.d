@@ -3,6 +3,7 @@
 ;;-------------------------------------------------- 
 (setq make-backup-files nil) ;; 关闭备份文件功能
 (setq inhibit-startup-screen t) ;; 关闭欢迎页面
+(setq js-indent-level 2) ;; js 缩进
 
 ;;-------------------------------------------------- 
 ;; 插件配置脚本
@@ -20,7 +21,6 @@
 (require 'init-dev-env-c)
 (require 'init-dev-env-go)
 (require 'init-dev-env-ruby)
-
 
 ;; 终端下不加载主题
 (when (not (eq window-system 'nil))

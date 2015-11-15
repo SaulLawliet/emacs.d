@@ -1,5 +1,8 @@
-;; 首先, 需要在系统里安装 clang, 才能触发 c-mode 的 company 补全.
+;;; package --- V
+;;; Commentary:
+;;; Code:
 
+;; 首先, 需要在系统里安装 clang, 才能触发 c-mode 的 company 补全.
 ;; include 补全
 (require-package 'auto-complete-c-headers)
 
@@ -38,3 +41,4 @@
 
 
 (provide 'init-dev-env-c)
+;;; init-dev-env-c.el ends here

@@ -1,3 +1,7 @@
+;;; package --- V
+;;; Commentary:
+;;; Code:
+
 (require-package 'solarized-theme)
 
 (require 'solarized)
@@ -5,4 +9,6 @@
 (create-solarized-theme 'light 'solarized-light)
 (provide-theme 'solarized-light)
 
+
 (provide 'init-theme)
+;;; init-theme.el ends here

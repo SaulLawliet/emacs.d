@@ -1,3 +1,7 @@
+;;; package --- V
+;;; Commentary:
+;;; Code:
+
 ;; 代码补全
 (require-package 'auto-complete)
 (ac-config-default)
@@ -10,8 +14,9 @@
 ;;(require-package 'yasnippet)
 ;;(yas-global-mode 1)
 
-;; 符号对 
+;; 符号对
 ;;(require-package 'smartparens)
 ;;(smartparens-global-strict-mode 1)
 
 (provide 'init-dev-env)
+;;; init-dev-env.el ends here

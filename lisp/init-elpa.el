@@ -1,3 +1,7 @@
+;;; package --- V
+;;; Commentary:
+;;; Code:
+
 (require 'package)
 
 ;;; Standard package repositories
@@ -23,9 +27,9 @@ re-downloaded in order to locate PACKAGE."
 	  (package-refresh-contents)
 	  (require-package package min-version t)))))
 
-
 (setq package-enable-at-startup nil)
 (package-initialize)
 
 
 (provide 'init-elpa)
+;;; init-elpa.el ends here

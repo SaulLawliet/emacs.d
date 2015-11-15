@@ -1,3 +1,7 @@
+;;; package --- V
+;;; Commentary:
+;;; Code:
+
 (require-package 'go-mode) ;; need instill godef(https://github.com/rogpeppe/godef)
 (require-package 'go-autocomplete) ;; need install gocode(https://github.com/nsf/gocode)
 
@@ -12,3 +16,4 @@
 
 
 (provide 'init-dev-env-go)
+;;; init-dev-env-go.el ends here

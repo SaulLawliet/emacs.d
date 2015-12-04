@@ -5,11 +5,9 @@
 ;; 首先, 需要在系统里安装 clang, 才能触发 c-mode 的 company 补全.
 ;; include 补全
 (require-package 'auto-complete-c-headers)
-
 (defun my:ac-c-headers-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers))
-
 (add-hook 'c-mode-hook 'my:ac-c-headers-init)
 
 ;; 下面这一句需要写到 init-local.el 文件中
@@ -24,12 +22,13 @@
 ;; flymake-google-cpplint
 ;; 此功能需要在系统安装 cpplint, 可以通过pip安装
 (require-package 'flymake-google-cpplint)
-(add-hook 'c-mode-common-hook 'flymake-google-cpplint-load)
+(add-hook 'c-mode-hook 'flymake-google-cpplint-load)
+(add-hook 'c++-mode-hook 'flymake-google-cpplint-load)
 
 ;; 下面这一句需要写到 init-local.el 文件中
 ;; 查询 cpplint 命令位置: type cpplint
 ;;(custom-set-variables
-;; '(flymake-google-cpplint-command "/usr/local/bin/cpplint"))
+;; '(flymake-google-cpplint-command "/path/to/cpplint.py"))
 
 ;; flymake-cursor, 查看错误提示
 (require-package 'flymake-cursor)

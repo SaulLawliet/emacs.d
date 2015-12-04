@@ -13,6 +13,7 @@
 (require 'init-dev-env-go)
 (require 'init-dev-env-ruby)
 (require 'init-dev-env-web)
+(require 'init-org)
 
 ;; 终端下不加载主题
 (when (not (eq window-system 'nil))

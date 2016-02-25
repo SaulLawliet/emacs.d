@@ -9,8 +9,8 @@
 
 
 ;; evil: 使用Vim式的快捷键
-(require-package 'evil)
-(evil-mode 1)
+;;(require-package 'evil)
+;;(evil-mode 1)
 
 
 ;; switch-window: 通过数字切换窗口

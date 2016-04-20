@@ -38,6 +38,27 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
+(defun my:compile-run-remove()
+  (interactive)
+  (setq tmp (file-name-sans-extension (file-name-nondirectory buffer-file-name)))
+
+  (setq command
+	(concat "gcc "
+		(file-name-nondirectory buffer-file-name)
+		" -o " tmp
+		" && ./" tmp 
+		" && rm " tmp))
+
+  (let ((command (read-from-minibuffer "Compile command: " command)))
+    (compile command)))
+
+(add-hook
+ 'c-mode-hook
+ (lambda()
+   (semantic-mode 1)
+   (local-set-key (kbd "<f5>") 'my:compile-run-remove) ;; 编译 - 执行 - 删除
+   (local-set-key (kbd "C-c C-j") 'semantic-ia-fast-jump) ;; 跳到函数定义, 暂时不会跳回
+   ))
 
 (provide 'init-dev-env-c)
 ;;; init-dev-env-c.el ends here

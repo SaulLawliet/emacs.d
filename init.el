@@ -13,13 +13,13 @@
 (require 'init-dev-env) ;; 代码通用部分
 (require 'init-dev-env-c)
 (require 'init-dev-env-go)
-;;(require 'init-dev-env-ruby)
-;;(require 'init-dev-env-web)
+(require 'init-dev-env-ruby)
+(require 'init-dev-env-web)
 
 
 ;; 终端下不加载主题
-(when (not (eq window-system 'nil))
-  (require 'init-theme))
+;;(when (not (eq window-system 'nil))
+(require 'init-theme)
 
 ;; 最后加载用户自定义配置
 (when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))

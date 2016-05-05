@@ -25,5 +25,13 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 
+;; whitespace-mode
+(global-whitespace-mode 1)
+;; automatically clean up bad whitespace
+(setq whitespace-action '(auto-cleanup))
+;; only show bad whitespace
+(setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab))
+
+
 (provide 'init-function)
 ;;; init-function.el ends here

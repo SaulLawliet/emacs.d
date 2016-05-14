@@ -11,6 +11,7 @@
 (require 'init-org)
 
 (require 'init-dev-env) ;; 代码通用部分
+(require 'init-dev-env-other)
 (require 'init-dev-env-c)
 (require 'init-dev-env-go)
 (require 'init-dev-env-ruby)

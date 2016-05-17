@@ -10,8 +10,5 @@
 (setq speedbar-show-unknown-files t)
 (setq speedbar-use-images nil)
 
-;;(setq js-indent-level 2) ;; js缩进为2空格
-
-
 (provide 'init-L)
 ;;; init-L.el ends here

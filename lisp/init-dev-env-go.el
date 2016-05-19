@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(require-package 'go-mode) ;; need instill godef(https://github.com/rogpeppe/godef)
+(require-package 'go-mode) ;; need install godef(https://github.com/rogpeppe/godef)
 (require-package 'go-autocomplete) ;; need install gocode(https://github.com/nsf/gocode)
 
 (after-load 'auto-complete

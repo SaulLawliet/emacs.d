@@ -9,6 +9,7 @@
 (require 'init-L) ;; 我的自定义
 
 (require 'init-org)
+(require 'init-helm)
 
 (require 'init-dev-env) ;; 代码通用部分
 (require 'init-dev-env-other)

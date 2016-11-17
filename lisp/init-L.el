@@ -10,6 +10,7 @@
 (global-set-key (kbd "<f8>") 'speedbar)
 (setq speedbar-show-unknown-files t)
 (setq speedbar-use-images nil)
+(setq-default indent-tabs-mode nil)
 
 (provide 'init-L)
 ;;; init-L.el ends here

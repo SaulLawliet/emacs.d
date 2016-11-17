@@ -30,7 +30,7 @@
 ;; automatically clean up bad whitespace
 (setq whitespace-action '(auto-cleanup))
 ;; only show bad whitespace
-(setq whitespace-style '(trailing space-before-tab empty space-after-tab))
+(setq whitespace-style '(empty trailing space-before-tab space-after-tab face tabs))
 
 
 (provide 'init-function)

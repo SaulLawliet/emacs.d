@@ -3,9 +3,9 @@
 ;;; Code:
 
 ;; exec-path-from-shell: 从shell中初始化PATH
-(require-package 'exec-path-from-shell)
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
+; (require-package 'exec-path-from-shell)
+; (when (memq window-system '(mac ns x))
+;   (exec-path-from-shell-initialize))
 
 
 ;; evil: 使用Vim式的快捷键
@@ -19,10 +19,10 @@
 
 
 ;; markdown-mode: 支持markdown语法高亮
-(require-package 'markdown-mode)
+; (require-package 'markdown-mode)
 ;; GitHub Flavored Markdown
-(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+; (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+; (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 
 ;; whitespace-mode
@@ -32,6 +32,9 @@
 ;; only show bad whitespace
 (setq whitespace-style '(empty trailing space-before-tab space-after-tab face tabs))
 
+;; 中英混合字体等宽
+(require-package 'cnfonts)
+(cnfonts-enable)
 
 (provide 'init-function)
 ;;; init-function.el ends here

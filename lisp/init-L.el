@@ -4,7 +4,7 @@
 
 (setq make-backup-files nil) ;; 关闭备份文件功能
 (setq inhibit-startup-screen t) ;; 关闭欢迎页面
-(setq tool-bar-mode nil) ;; 关闭工具条
+(tool-bar-mode -1) ;; 关闭工具条
 ;; (global-linum-mode 1) ;; 显示行号
 
 (global-set-key (kbd "<f8>") 'speedbar)

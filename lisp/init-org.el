@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(require-package 'htmlize)
+
 ;;; copy from  http://doc.norang.ca/org-mode.html
 (setq org-alphabetical-lists t)
 
@@ -26,18 +28,18 @@
 (org-babel-do-load-languages
  (quote org-babel-load-languages)
  (quote ((emacs-lisp . t)
-	 (dot . t)
-	 (ditaa . t)
-	 (R . t)
-	 (python . t)
-	 (ruby . t)
-	 (gnuplot . t)
-	 (clojure . t)
-	 (sh . t)
-	 (ledger . t)
-	 (org . t)
-	 (plantuml . t)
-	 (latex . t))))
+         (dot . t)
+         (ditaa . t)
+         (R . t)
+         (python . t)
+         (ruby . t)
+         (gnuplot . t)
+         (clojure . t)
+         (shell . t)
+         (ledger . t)
+         (org . t)
+         (plantuml . t)
+         (latex . t))))
 
 ; Do not prompt to confirm evaluation
 ; This may be dangerous - make sure you understand the consequences
@@ -56,7 +58,7 @@
 ; Do not use sub or superscripts - I currently don't need this functionality in my documents
 (setq org-export-with-sub-superscripts nil)
 ; Use org.css from the norang website for export document stylesheets
-; (setq org-html-head-extra "<link rel=\"stylesheet\" href=\"/notebook/org.css\" type=\"text/css\" />")
+(setq org-html-head-extra "<link rel=\"stylesheet\" href=\"https://saullawliet.github.io/assets/css/org.css\" type=\"text/css\" />")
 (setq org-html-head-include-default-style nil)
 ; Do not generate internal css formatting for HTML exports
 (setq org-export-htmlize-output-type (quote css))
@@ -64,6 +66,39 @@
 (setq org-export-with-LaTeX-fragments t)
 ; Increase default number of headings to export
 (setq org-export-headline-levels 6)
+
+(setq org-publish-project-alist
+      (quote (("notebook"
+               :base-directory "/data/repositories/notebook"
+               :publishing-directory "/data/repositories/saullawliet.github.io/notebook"
+               :recursive t
+               :table-of-contents nil
+               :base-extension "org"
+               :publishing-function org-html-publish-to-html
+               :style-include-default nil
+               :section-numbers nil
+               :table-of-contents nil
+               :html-head "<link rel=\"stylesheet\" href=\"/assets/css/org.css\" type=\"text/css\" />"
+               :author-info nil
+               :creator-info nil)
+	      ("notebook-extra"
+               :base-directory "/data/repositories/notebook"
+               :publishing-directory "/data/repositories/saullawliet.github.io/notebook"
+               :base-extension "css\\|pdf\\|png\\|jpg\\|gif"
+               :publishing-function org-publish-attachment
+               :recursive t
+               :author nil)
+              )))
+
+(defun bh/save-then-publish (&optional force)
+  (interactive "P")
+  (save-buffer)
+  (org-save-all-org-buffers)
+  (let ((org-html-head-extra)
+        (org-html-validation-link "<a href=\"http://validator.w3.org/check?uri=referer\">Validate XHTML 1.0</a>"))
+    ; (org-publish-current-project force)))
+    (org-publish-all force)))
+(global-set-key (kbd "C-<f12>") 'bh/save-then-publish)
 
 (provide 'init-org)
 ;;; init-org.el ends here

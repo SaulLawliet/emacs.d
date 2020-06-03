@@ -69,8 +69,8 @@
 
 (setq org-publish-project-alist
       (quote (("notebook"
-               :base-directory "/data/repositories/notebook"
-               :publishing-directory "/data/repositories/saullawliet.github.io/notebook"
+               :base-directory "~/Data/Dropbox/notes"
+               :publishing-directory "~/Data/Repositories/saullawliet.github.io/notebook"
                :recursive t
                :table-of-contents nil
                :base-extension "org"
@@ -82,8 +82,8 @@
                :author-info nil
                :creator-info nil)
 	      ("notebook-extra"
-               :base-directory "/data/repositories/notebook"
-               :publishing-directory "/data/repositories/saullawliet.github.io/notebook"
+               :base-directory "~/Data/Dropbox/notes"
+               :publishing-directory "~/Data/repositories/saullawliet.github.io/notebook"
                :base-extension "css\\|pdf\\|png\\|jpg\\|gif"
                :publishing-function org-publish-attachment
                :recursive t

@@ -11,12 +11,13 @@
 (require 'init-org)
 (require 'init-helm)
 
-; (require 'init-dev-env) ;; 代码通用部分
-; (require 'init-dev-env-c)
-; (require 'init-dev-env-go)
-; (require 'init-dev-env-ruby)
-; (require 'init-dev-env-scala)
-; (require 'init-dev-env-web)
+;; 开发环境切换到了 vscode
+;; (require 'init-dev-env) ;; 代码通用部分
+;; (require 'init-dev-env-c)
+;; (require 'init-dev-env-go)
+;; (require 'init-dev-env-ruby)
+;; (require 'init-dev-env-scala)
+;; (require 'init-dev-env-web)
 
 
 ;; 终端下不加载主题
